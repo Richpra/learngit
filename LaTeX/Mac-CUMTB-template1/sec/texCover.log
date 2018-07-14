@@ -1,0 +1,35 @@
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2018.3.19)  11 JUL 2018 18:08
+entering extended mode
+**H:/Mac-CUMTB-template1/sec/texCover.tex
+(H:/Mac-CUMTB-template1/sec/texCover.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+
+! LaTeX Error: Environment titlepage undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4  \begin{titlepage}
+                      
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.4  \begin{titlepage}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+ 
+Here is how much of TeX's memory you used:
+ 8 strings out of 430478
+ 282 string characters out of 3191502
+ 44928 words of memory out of 3000000
+ 3236 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 5i,0n,4p,70b,16s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.

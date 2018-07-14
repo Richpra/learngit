@@ -1,0 +1,40 @@
+% !Mode::"TeX:UTF-8"
+% !TEX encoding = UTF-8
+\section{数值算例}
+\begin{exmp}
+使用不动点迭代法求方程$2xe^x-1=0$在$x=0.4$附近的一个根，要求精度$\epsilon=10^(-5)$
+\end{exmp}
+\begin{solution}
+将方程改写成$x=\frac 1 2 e^(-x)$,于是迭代函数为$\varphi(x)=frac 1 2 e^(-x)$,$\varphi'(x)=-\frac1 2 e^(-x) $.当$x_0=0.4$时，$\lvert\varphi'(x_0)<0.336\rvert$,由于$\varphi'(x)$是连续函数，可以断定在$x_0=0.4$的某邻域内有$\lvert\ {\varphi'}(x)<1 \rvert$,所以迭代过程$x_(k+1)=\frac 1 2 e^(-x_k)$是收敛的，计算结果如下表所示。\\
+\begin{tabular}{|c|c|c|}
+\hline
+k&$x_k$&${x_k-x_{k-1}}$\\
+\hline
+0&0.4&{ }\\
+1&0.335160&-0.064840\\
+2&0.357612&0.022452\\
+3&0.349672&-0.007940\\
+4&0.352460&0.002787\\
+5&0.351479&-0.000981\\
+6&0.351823&0.000345\\
+7&0.351702&-0.000121\\
+8&0.351745&0.000043\\
+9&0.351730&-0.000015\\
+10&0.351735&0.000005\\
+...&...&...\\
+\hline
+\end{tabular}  
+
+实现迭代法的MATLAB函数文件iterate.m如下.
+
+\begin{everbatim}
+function x=iterate(fname,x0,e,n)
+if nargin<4,n=500;end;
+if nargin<3,e=1e-5;end;
+x=x0;x0=x+2*e;k=0;
+while abs(x0-x)>e&k<n,k=k+1;
+  x=x0;x0=feval(fname,x0);
+ end
+if k=-n,warning('已达到迭代次数上限');end
+\end{everbatim}
+\end{solution}

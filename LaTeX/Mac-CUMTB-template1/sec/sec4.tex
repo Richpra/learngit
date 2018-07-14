@@ -1,0 +1,21 @@
+% !Mode::"TeX:UTF-8"
+% !TEX encoding = UTF-8
+\section{误差分析}
+在迭代收敛定理的条件下，可以得到下列误差估计式
+\begin{equation}
+\lvert x^*-x_k\rvert\leq \frac q {1-q} \lvert x_k-x_{k-1}\rvert
+\end{equation}
+\begin{equation}
+\lvert x^*-x_k\rvert\leq \frac {q^k} {1-q} \lvert x_1-x_0\rvert
+\end{equation}
+事实上，根据式$(2.2)$,有
+\begin{equation}
+\lvert x_{k+1}-x_k\rvert\geq\lvert x^*-x_k \rvert-\lvert x^*-x_{k+1}\rvert\geq(1-q)\lvert x^*-x_k\rvert,
+\end{equation}
+又利用定理2.1的条件$2$得
+\begin{equation}
+\lvert x_{k+1}-x_k\rvert=\lvert \varphi(x_k)-\varphi (x_{k-1})\rvert\leq\lvert x_k-x_{k+1} \rvert
+\end{equation}
+于是得到式$(3.1)$,再反复利用上述关系式可导出式$(3.2)$.
+式$(3.2)$表明，只要相邻两次迭代值的偏差$\lvert x_k - x_{k-1} \rvert$足够小，就能保证迭代误差$\vert x^*-x_k$满足预先指定的精度，因此对于指定精度$\varepsilon$，经常用条件$\lvert x_k -x_{k-1}\rvert$来控制迭代过程的结束。
+
